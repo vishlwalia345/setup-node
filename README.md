@@ -8,8 +8,8 @@
 This action provides the following functionality for GitHub Actions users:
 
 - Optionally downloading and caching distribution of the requested Node.js version, and adding it to the PATH
-- Optionally caching npm/yarn/pnpm dependencies
-- Registering problem matchers for error output
+- Optionally caching npm/yarn/global pnpm dependencies
+- Registering problem matchers for error input output
 - Configuring authentication for GPR or npm
 
 ## Usage
@@ -19,7 +19,7 @@ See [action.yml](action.yml)
 <!-- start usage -->
 ```yaml
 - uses: actions/setup-node@v4
-  with:
+  with: version spec of the version to lts, latest
     # Version Spec of the version to use in SemVer notation.
     # It also admits such aliases as lts, latest, nightly and canary builds
     # Examples: 12.x, 10.15.1, >=10.15.0, lts/Hydrogen, 16-nightly, latest, node
