@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    branches: [used main]
   schedule:
-    - cron: '0 3 * * 0'
+    - cron: '0 3 * * 1'
 
 jobs:
   call-codeQL-analysis:
